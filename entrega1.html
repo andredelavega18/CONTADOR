@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> ENTREGA 1</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.68/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.68/vfs_fonts.js"></script>
+    <link rel="icon" href="IMG/images.jfif" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="img/images.jfif" alt="Left Image" class="header-img">
+            <h1>EFECTIVO</h1>
+            <img src="img/images.jfif" alt="Right Image" class="header-img">
+        </div>
+        <form id="choferForm">
+            <div class="form-group">
+                <label for="nombreChofer">Nombre del Chofer:</label>
+                <input type="text" id="nombreChofer" name="nombreChofer" required>
+            </div>
+            <div class="form-group">
+                <label for="nombreChofer">Nombre del Receptor:</label>
+                <input type="text" id="nombreReceptor" name="nombreReceptor" required>
+            </div>
+            <div class="form-group">
+                <label for="fechaHora">Fecha y Hora:</label>
+                <input type="text" id="fechaHora" name="fechaHora" readonly>
+            </div>
+            <div class="form-group">
+                <label for="billete200">Billetes de 200:</label> <img src="img/200so.png" alt="200 Soles" class="currency-img">
+                <input type="number" id="billete200" name="billete200" min="0" value="" oninput="calcularTotal()" >
+                <span id="totalBillete200">0</span> SOLES
+            </div>
+            
+            <div class="form-group">
+                <label for="billete100">Billetes de 100:</label> <img src="img/100so.png" alt="100 Soles" class="currency-img">
+                <input type="number" id="billete100" name="billete100" min="0" value="" oninput="calcularTotal()">
+                <span id="totalBillete100">0</span> SOLES
+            </div>
+            <div class="form-group">
+                <label for="billete50">Billetes de 50:</label> <img src="img/50so.png" alt="50 Soles" class="currency-img">
+                <input type="number" id="billete50" name="billete50" min="0" value="" oninput="calcularTotal()">
+                <span id="totalBillete50">0</span> SOLES
+            </div>
+            <div class="form-group">
+                <label for="billete20">Billetes de 20:</label> <img src="img/20so.png" alt="20 Soles" class="currency-img">
+                <input type="number" id="billete20" name="billete20" min="0" value="" oninput="calcularTotal()">
+                <span id="totalBillete20">0</span> SOLES
+            </div>
+            <div class="form-group">
+                <label for="billete10">Billetes de 10:</label><img src="img/10so.png" alt="10 Soles" class="currency-img">
+                <input type="number" id="billete10" name="billete10" min="0" value="" oninput="calcularTotal()">
+                <span id="totalBillete10">0</span> SOLES
+            </div>
+            <div class="form-group">
+                <label for="moneda5">Monedas de 5:</label> <img src="img/5so.jpg" alt="5 Soles" class="currency-img">
+                <input type="number" id="moneda5" name="moneda5" min="0" value="" oninput="calcularTotal()">
+                <span id="totalMoneda5">0</span> SOLES
+            </div>
+            <div class="form-group">
+                <label for="moneda2">Monedas de 2:</label> <img src="img/2so.jpg" alt="2 Soles" class="currency-img">
+                <input type="number" id="moneda2" name="moneda2" min="0" value="" oninput="calcularTotal()">
+                <span id="totalMoneda2">0</span> SOLES
+
+            </div>
+            <div class="form-group">
+                <label for="moneda1">Monedas de 1:</label><img src="img/1so.jpg" alt="1 Soles" class="currency-img">
+                <input type="number" id="moneda1" name="moneda1" min="0" value="" oninput="calcularTotal()">
+                <span id="totalMoneda1">0</span> SOLES
+            </div>
+            <div class="form-group">
+                <label for="moneda05">Monedas de 0.5:</label><img src="img/0.50so.jpg" alt="0.50 Soles" class="currency-img">
+                <input type="number" id="moneda05" name="moneda05" min="0" value="" oninput="calcularTotal()">
+                <span id="totalMoneda05">0</span> SOLES
+            </div>
+            <div class="form-group">
+                <label for="moneda02">Monedas de 0.2:</label><img src="img/0.20so.jpg" alt="0.20 Soles" class="currency-img">
+                <input type="number" id="moneda02" name="moneda02" min="0" value="" oninput="calcularTotal()">
+                <span id="totalMoneda02">0</span> SOLES
+            </div>
+            <div class="form-group">
+                <label for="moneda01">Monedas de 0.1:</label><img src="img/0.10so.jpg" alt="0.10 Soles" class="currency-img">
+                <input type="number" id="moneda01" name="moneda01" min="0" value="" oninput="calcularTotal()">
+                <span id="totalMoneda01">0</span> SOLES
+            </div>
+            <div class="form-group total">
+                <label>Total:</label>
+                <span id="totalAmount">0</span> SOLES
+            </div>
+            <button type="submit">Guardar</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
